@@ -8,10 +8,12 @@ const passport = require("passport")
 
 const User = require("../../models/User")
 
+
+
 //test
-// router.get("/test",(req,res) =>{
-//   res.json({msg:"Login works"})
-// })
+router.get("/test",(req,res) =>{
+  res.json({msg:"Login works"})
+})
 
 //api/users/register 注册
 router.post("/register",(req,res) =>{
