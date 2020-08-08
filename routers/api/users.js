@@ -8,8 +8,6 @@ const passport = require("passport")
 
 const User = require("../../models/User")
 
-
-
 //test
 router.get("/test",(req,res) =>{
   res.json({msg:"Login works"})

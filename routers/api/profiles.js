@@ -85,9 +85,11 @@ router.delete(
     '/delete/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-      Profile.findOneAndRemove({ _id: req.params.id })
+     Profile.findOneAndDelete({ _id:req.params.id })
           .then(profile => {
-            profile.save().then(profile => res.json(profile));
+            profile.save();
+            res.json(profile)
+            // profile.save().then(profile => res.json(profile));
           })
           .catch(err => res.status(404).json('删除失败!'));
     }
